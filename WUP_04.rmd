@@ -11,7 +11,8 @@ output:
 require(knitr)
 require(tidyverse)
 require(tigerstats)
-
+file="GSScsv.csv"
+mydata<-read_csv(file="GSScsv.csv")
 ```
 
 # Introduction
@@ -36,7 +37,27 @@ $H_a$ There is a significant difference in average score on the WORDSUM test bet
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
+```{r}
+boxplot(WORDSUM~DEGREE,data=mydata)
+```
+
+```{r}
+basicCN <- ggplot(mydata,aes(x=DEGREE,y=WORDSUM))
+```
+
+```{r}
+basicCN + geom_boxplot()
+```
+
+The median for graduates is the highest(and the values in general) , meaning they"re the ones who are most likely to pass Wordsum. LT high school has the lowest scores for passing Wordsum test.
+
 ### Numerical Descriptive Results
+
+```{r}
+favstats(WORDSUM~DEGREE,data=mydata)
+```
+
+The mean for graduate school is the highest showing that graduate students are have the highest scores for the test. The means for both bachelor and junior college students are very close( and they're relatively high values in comparison with graduates). The lowest mean is for LT High School , confirming the data that we saw in the plot earlier.
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
