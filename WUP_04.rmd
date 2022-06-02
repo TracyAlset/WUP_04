@@ -84,3 +84,6 @@ Based on this data, the difference between LT high school and graduate is signif
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+
+Based on the data, it looks like graduate students have the highest scores while LtT high school students have the lowest scores, the rest have relatively close scores and they were relatively high in comparison with graduate students.
+
