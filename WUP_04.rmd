@@ -63,6 +63,21 @@ The mean for graduate school is the highest showing that graduate students are h
 
 ## Inferential Results
 
+```{r}
+model1 <- aov(WORDSUM~DEGREE,data=mydata)
+summary.aov(model1)
+```
+
+the P value is very very low and this doesn't help us analyze the data.
+
+```{r}
+#we specify the margins starting at the bottom and proceeding clockwise - thus 8.7 is the left side margin to hold the names of the factors
+par(mar = c(3, 15.7, 2, 2))
+plot(TukeyHSD(model1),las=2)
+```
+
+Based on this data, the difference between LT high school and graduate is significantly big ( LT-graduates= a high negative number ) and this shows that the scores for gradates are the highest in this data set and it's the lowest for LT high school. The differences between the rest are by far lower.
+
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
 
 
